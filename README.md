@@ -1,29 +1,175 @@
-# AI Research Assistant
+# 🧠 AI Research Assistant
 
-A production-ready full-stack AI Research Assistant for multi-document upload, RAG-based question answering, web research, citations, conversation memory, and document summarization.
+A production-style full-stack Generative AI platform that combines **Retrieval-Augmented Generation (RAG)**, **multi-document reasoning**, **web research**, **conversation memory**, and **source-grounded answer generation** into a modern AI research workflow.
 
-## Features
+The system allows users to upload research documents, retrieve semantic information, generate contextual answers with citations, summarize large files, and optionally augment responses using live web search.
 
-- Upload PDF, TXT, DOCX, and Markdown files.
-- Extract, clean, chunk, embed, and index document text.
-- Retrieve relevant chunks with a persistent local vector index.
-- Generate cited answers from documents and optional web search.
-- Use Groq, OpenAI, Gemini, or local fallback mode.
-- Store document metadata, chat history, and memory in SQLite.
-- Multi-agent backend: query understanding, retrieval, web research, answer generation, citation verification, memory, and summarization.
-- Next.js dashboard with upload, chat, document library, history, and settings pages.
+Built with a modern AI stack using **FastAPI**, **Next.js**, **Groq LLMs**, **vector embeddings**, and **semantic retrieval pipelines**.
 
-## Tech Stack
+---
 
-Frontend: Next.js, TypeScript, Tailwind CSS, lucide-react.
+# ✨ Key Highlights
 
-Backend: FastAPI, Python, SQLAlchemy, local vector index, Groq/OpenAI/Gemini adapters, SQLite.
+✅ Multi-document Retrieval-Augmented Generation (RAG)
+✅ Citation-aware answer generation
+✅ Source-grounded responses from documents and web
+✅ Multi-agent backend architecture
+✅ Semantic chunking and vector search
+✅ Conversation memory support
+✅ Document summarization pipeline
+✅ Production-style AI workflow orchestration
+✅ Modern glassmorphism-inspired UI
+✅ Full-stack deployment-ready architecture
 
-## Architecture
+---
 
-The FastAPI backend receives uploads, extracts text, chunks content, creates embeddings, and stores vectors in a persistent local vector index. User questions pass through a query understanding agent, retrieval agent, optional web research agent, answer generation agent, citation verification agent, and memory agent. The frontend consumes the API and displays answers with document and web citations.
+# 🚀 Features
 
-## Folder Structure
+## 📄 Document Intelligence
+
+* Upload PDF, DOCX, TXT, and Markdown documents
+* Automatic text extraction and semantic chunking
+* Persistent vector indexing for retrieval
+* Multi-document contextual question answering
+* AI-generated document summaries
+
+## 🔍 AI Retrieval Pipeline
+
+* Semantic similarity search
+* Context-aware retrieval
+* Citation verification
+* Relevant-source filtering
+* Optional live web augmentation
+
+## 🌐 Web Research
+
+* Real-time web search integration
+* Recency-aware responses
+* Source-aware answer generation
+* Web citation support
+
+## 🧠 Memory System
+
+* Conversation history persistence
+* Follow-up question understanding
+* Context retention across chats
+* SQLite-based memory storage
+
+## 🎨 Frontend Experience
+
+* Modern AI dashboard UI
+* Animated interactions and transitions
+* Responsive layout
+* Document management interface
+* Chat-based research workflow
+
+---
+
+# 🏗️ System Architecture
+
+```text
+User Query
+    │
+    ▼
+Query Understanding Agent
+    │
+    ├── Document Retrieval Agent
+    │       ├── Chunk Retrieval
+    │       ├── Semantic Search
+    │       └── Citation Extraction
+    │
+    ├── Web Research Agent
+    │       └── Live Search + Summaries
+    │
+    ▼
+Answer Generation Agent
+    │
+    ├── Context Fusion
+    ├── Source Grounding
+    ├── Citation Verification
+    └── Final Response Generation
+    │
+    ▼
+Frontend UI (Next.js)
+```
+
+---
+
+# 🧠 AI Pipeline
+
+## 1. Document Ingestion
+
+Documents are:
+
+* uploaded
+* cleaned
+* chunked
+* embedded
+* stored in a persistent vector index
+
+## 2. Query Understanding
+
+The system analyzes:
+
+* recency intent
+* document intent
+* summarization intent
+* web search requirements
+
+## 3. Retrieval
+
+Relevant chunks are retrieved using:
+
+* semantic similarity
+* contextual embeddings
+* vector search
+
+## 4. Web Augmentation
+
+If required:
+
+* web search is triggered
+* results are summarized
+* sources are filtered
+
+## 5. Answer Generation
+
+The LLM:
+
+* combines retrieved context
+* generates grounded answers
+* attaches citations
+* removes unsupported claims
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* lucide-react
+
+## Backend
+
+* FastAPI
+* Python
+* SQLAlchemy
+* SQLite
+
+## AI / RAG Stack
+
+* Groq LLMs
+* Vector embeddings
+* Semantic retrieval
+* Multi-agent orchestration
+* Citation-aware generation
+
+---
+
+# 📂 Project Structure
 
 ```text
 ai-research-assistant/
@@ -33,6 +179,7 @@ ai-research-assistant/
 │   ├── lib/
 │   ├── public/
 │   └── package.json
+│
 ├── backend/
 │   ├── app/
 │   │   ├── agents/
@@ -42,83 +189,149 @@ ai-research-assistant/
 │   │   ├── rag/
 │   │   ├── memory/
 │   │   └── main.py
+│   │
 │   ├── requirements.txt
 │   └── .env.example
+│
 ├── README.md
 ├── HOW_TO_USE.md
 └── .gitignore
 ```
 
-## Installation
+---
 
-Backend:
+# ⚙️ Installation
+
+## Backend Setup
 
 ```bash
 cd backend
+
 python -m venv .venv
+
 .venv\Scripts\activate
+
 pip install -r requirements.txt
+
 copy .env.example .env
-uvicorn app.main:app --reload
+
+python -m uvicorn app.main:app --reload --port 8001
 ```
 
-Frontend:
+---
+
+## Frontend Setup
 
 ```bash
 cd frontend
+
 npm install
+
 copy .env.example .env.local
+
 npm run dev
 ```
 
-Open `http://localhost:3000`. API docs are available at `http://localhost:8001/docs`.
+---
 
-## Environment Variables
+# 🌍 Environment Variables
 
-Backend:
+## Backend
 
-- `LLM_PROVIDER`: `groq`, `openai`, `gemini`, or `local`.
-- `GROQ_API_KEY`: recommended LLM key.
-- `OPENAI_API_KEY`, `GEMINI_API_KEY`: optional alternatives.
-- `WEB_SEARCH_PROVIDER`: `tavily`, `serpapi`, `brave`, or `none`.
-- `TAVILY_API_KEY`, `SERPAPI_API_KEY`, `BRAVE_API_KEY`: optional web search keys.
-- `DATABASE_URL`: defaults to SQLite.
-- `VECTOR_DB_DIR`, `UPLOAD_DIR`: local storage paths.
+```env
+LLM_PROVIDER=groq
+GROQ_API_KEY=your_key
+WEB_SEARCH_PROVIDER=tavily
+TAVILY_API_KEY=your_key
+DATABASE_URL=sqlite:///./app.db
+```
 
-Frontend:
+## Frontend
 
-- `NEXT_PUBLIC_API_URL`: defaults to `http://localhost:8001`.
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8001
+```
 
-## API Endpoints
+---
 
-- `GET /health`
-- `POST /upload`
-- `POST /chat`
-- `GET /documents`
-- `DELETE /documents/{id}`
-- `GET /history`
-- `DELETE /history`
-- `POST /summarize`
+# 📡 API Endpoints
 
-## Screenshots
+| Method | Endpoint          | Description               |
+| ------ | ----------------- | ------------------------- |
+| GET    | `/health`         | Backend health status     |
+| POST   | `/upload`         | Upload documents          |
+| POST   | `/chat`           | Ask contextual questions  |
+| GET    | `/documents`      | List uploaded documents   |
+| DELETE | `/documents/{id}` | Remove document           |
+| GET    | `/history`        | Retrieve chat history     |
+| DELETE | `/history`        | Clear memory              |
+| POST   | `/summarize`      | Generate document summary |
 
-Add screenshots after running the app locally:
+---
 
-- Home dashboard
-- Document upload
-- Cited chat answer
-- Document library
-- Conversation history
+# 🖼️ Screenshots
 
-## Future Improvements
+## Home Dashboard
 
-- Add authentication and user workspaces.
-- Add PostgreSQL and pgvector deployment mode.
-- Add streaming chat responses.
-- Add reranking and hybrid keyword/vector search.
-- Add background workers for large document ingestion.
-- Add source highlighting and page previews.
+*Add screenshot here*
 
-## License
+## Research Chat
 
-MIT License.
+*Add screenshot here*
+
+## Document Upload
+
+*Add screenshot here*
+
+## Document Library
+
+*Add screenshot here*
+
+## Settings Dashboard
+
+*Add screenshot here*
+
+---
+
+# 🚀 Future Improvements
+
+* Streaming AI responses
+* Hybrid keyword + vector retrieval
+* Authentication and user workspaces
+* PostgreSQL + pgvector support
+* Source highlighting in PDFs
+* Multi-user deployment
+* Background ingestion workers
+* Agent observability dashboard
+* Voice-enabled research workflow
+
+---
+
+# 💡 Why This Project Matters
+
+Most AI chatbots generate answers without transparency.
+
+This project focuses on:
+
+* grounded generation
+* source-aware reasoning
+* document intelligence
+* explainable AI workflows
+* production-style AI system design
+
+It demonstrates how modern AI systems combine:
+
+* LLM orchestration
+* retrieval systems
+* vector databases
+* semantic search
+* web augmentation
+* memory-aware interactions
+
+into a cohesive real-world application.
+
+---
+
+# Author
+
+*Mokshit*
