@@ -20,7 +20,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://ai-research-assistant-catonlsds-projects.vercel.app",
+        "https://ai-research-assistant-lime-five.vercel.app",
+    ],
     allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
