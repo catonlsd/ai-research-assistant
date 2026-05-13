@@ -324,6 +324,9 @@ Ingest Documents
 Knowledge Base
 ![Document Library](screenshots/base.png)
 
+Interactions
+![Interact](screenshots/sessions.png)
+
 About AIRA
 ![Settings Dashboard](screenshots/about.png)
 
