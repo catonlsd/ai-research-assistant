@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FileText, Sparkles, Trash2 } from "lucide-react";
+import { Library, FileText, Sparkles, Trash2 } from "lucide-react";
 import { apiDelete, apiGet, summarizeDocument } from "@/lib/api";
 import { CitationList } from "@/components/citation-list";
 import type { Citation } from "@/lib/api";
@@ -55,8 +55,8 @@ export default function DocumentsPage() {
 
         <div className="relative z-10">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-accent">
-            <FileText className="h-3.5 w-3.5" />
-            Indexed knowledge base
+            <Library className="h-3.5 w-3.5" />
+            AI-powered knowledge base
           </div>
 
           <h1 className="text-3xl font-semibold tracking-tight text-slate-950">
@@ -125,7 +125,7 @@ export default function DocumentsPage() {
         {!docs.length && (
           <div className="p-8 text-center">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-accent">
-              <FileText className="h-5 w-5" />
+              <Library className="h-5 w-5" />
             </div>
             <p className="text-sm font-medium text-slate-700">
               No documents indexed yet.

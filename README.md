@@ -1,25 +1,43 @@
 # 🧠 AI Research Assistant
 
-A production-style full-stack Generative AI platform that combines **Retrieval-Augmented Generation (RAG)**, **multi-document reasoning**, **web research**, **conversation memory**, and **source-grounded answer generation** into a modern AI research workflow.
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange)
+![RAG](https://img.shields.io/badge/RAG-AI-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-Frontend-blue)
+![Python](https://img.shields.io/badge/Python-AI-yellow)
+![License](https://img.shields.io/badge/License-MIT-purple)
 
-The system allows users to upload research documents, retrieve semantic information, generate contextual answers with citations, summarize large files, and optionally augment responses using live web search.
+A production-style full-stack Generative AI platform that combines Retrieval-Augmented Generation (RAG), multi-document reasoning, web research, semantic retrieval, memory systems, and citation-aware answer generation into a modern AI research workflow.
 
-Built with a modern AI stack using **FastAPI**, **Next.js**, **Groq LLMs**, **vector embeddings**, and **semantic retrieval pipelines**.
+The platform enables users to upload research documents, retrieve semantic information, generate grounded answers with citations, summarize documents, and augment responses using live web search.
+
+Built using FastAPI, Next.js, Groq LLMs, vector embeddings, semantic retrieval pipelines, and multi-agent orchestration.
+
+---
+
+# 🔗 Live Demo
+
+## Frontend
+https://ai-research-assistant-lime-five.vercel.app/
+
+## Backend API Docs
+https://ai-research-assistant-backend-eoew.onrender.com/docs
 
 ---
 
 # ✨ Key Highlights
 
-✅ Multi-document Retrieval-Augmented Generation (RAG)
-✅ Citation-aware answer generation
-✅ Source-grounded responses from documents and web
-✅ Multi-agent backend architecture
-✅ Semantic chunking and vector search
-✅ Conversation memory support
-✅ Document summarization pipeline
-✅ Production-style AI workflow orchestration
-✅ Modern glassmorphism-inspired UI
-✅ Full-stack deployment-ready architecture
+✅ Multi-document Retrieval-Augmented Generation (RAG)  
+✅ Citation-aware answer generation  
+✅ Source-grounded responses from documents and web  
+✅ Multi-agent backend architecture  
+✅ Semantic chunking and vector retrieval  
+✅ Conversation memory support  
+✅ Document summarization pipeline  
+✅ Real-time web augmentation  
+✅ Modern AI dashboard UI  
+✅ Production-style deployment architecture  
 
 ---
 
@@ -27,41 +45,51 @@ Built with a modern AI stack using **FastAPI**, **Next.js**, **Groq LLMs**, **ve
 
 ## 📄 Document Intelligence
 
-* Upload PDF, DOCX, TXT, and Markdown documents
-* Automatic text extraction and semantic chunking
-* Persistent vector indexing for retrieval
-* Multi-document contextual question answering
-* AI-generated document summaries
+- Upload PDF, DOCX, TXT, and Markdown files
+- Automatic text extraction
+- Semantic chunking pipeline
+- Persistent vector indexing
+- Multi-document contextual QnA
+- AI-generated document summaries
+
+---
 
 ## 🔍 AI Retrieval Pipeline
 
-* Semantic similarity search
-* Context-aware retrieval
-* Citation verification
-* Relevant-source filtering
-* Optional live web augmentation
+- Semantic similarity search
+- Context-aware retrieval
+- Citation verification
+- Relevant-source filtering
+- Source-grounded answer generation
+
+---
 
 ## 🌐 Web Research
 
-* Real-time web search integration
-* Recency-aware responses
-* Source-aware answer generation
-* Web citation support
+- Real-time web search integration
+- Recency-aware responses
+- Web citation support
+- External knowledge augmentation
+
+---
 
 ## 🧠 Memory System
 
-* Conversation history persistence
-* Follow-up question understanding
-* Context retention across chats
-* SQLite-based memory storage
+- Conversation history persistence
+- Follow-up question understanding
+- Context retention across sessions
+- SQLite-based chat memory
+
+---
 
 ## 🎨 Frontend Experience
 
-* Modern AI dashboard UI
-* Animated interactions and transitions
-* Responsive layout
-* Document management interface
-* Chat-based research workflow
+- Modern AI dashboard
+- Glassmorphism-inspired UI
+- Responsive layout
+- Animated interactions
+- Chat-based workflow
+- Document management interface
 
 ---
 
@@ -91,87 +119,107 @@ Answer Generation Agent
     │
     ▼
 Frontend UI (Next.js)
-```
 
 ---
 
-# 🧠 AI Pipeline
+🧠 AI Pipeline
 
-## 1. Document Ingestion
+1. Document Ingestion
 
 Documents are:
+uploaded
+cleaned
+chunked
+embedded
+indexed into vector storage
 
-* uploaded
-* cleaned
-* chunked
-* embedded
-* stored in a persistent vector index
+2. Query Understanding
 
-## 2. Query Understanding
+The system detects:
+document intent
+summarization intent
+recency requirements
+web search requirements
 
-The system analyzes:
-
-* recency intent
-* document intent
-* summarization intent
-* web search requirements
-
-## 3. Retrieval
+3. Retrieval
 
 Relevant chunks are retrieved using:
+semantic similarity
+contextual embeddings
+vector search
 
-* semantic similarity
-* contextual embeddings
-* vector search
-
-## 4. Web Augmentation
+4. Web Augmentation
 
 If required:
+web search is triggered
+results are summarized
+sources are filtered
 
-* web search is triggered
-* results are summarized
-* sources are filtered
-
-## 5. Answer Generation
+5. Answer Generation
 
 The LLM:
-
-* combines retrieved context
-* generates grounded answers
-* attaches citations
-* removes unsupported claims
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-* Next.js
-* TypeScript
-* Tailwind CSS
-* lucide-react
-
-## Backend
-
-* FastAPI
-* Python
-* SQLAlchemy
-* SQLite
-
-## AI / RAG Stack
-
-* Groq LLMs
-* Vector embeddings
-* Semantic retrieval
-* Multi-agent orchestration
-* Citation-aware generation
+combines retrieved context
+generates grounded answers
+attaches citations
+removes unsupported claims
 
 ---
 
-# 📂 Project Structure
+🧩 Engineering Concepts Demonstrated
 
-```text
+Retrieval-Augmented Generation (RAG)
+Semantic Search
+Vector Embeddings
+Multi-Agent AI Orchestration
+Context Grounding
+Citation-aware Generation
+Full-stack AI Deployment
+Prompt Engineering
+API Design with FastAPI
+Async AI Pipelines
+Stateful Memory Systems
+Production-style AI Workflows
+
+---
+
+⚡ Challenges Solved
+
+Cross-origin frontend/backend deployment
+Citation grounding
+Multi-document retrieval
+Context window optimization
+Semantic chunk retrieval
+Persistent memory management
+Real-time web augmentation
+Frontend-backend orchestration
+
+---
+
+🛠️ Tech Stack
+
+Frontend
+Next.js 14
+TypeScript
+Tailwind CSS
+lucide-react
+Backend
+FastAPI
+Python
+SQLAlchemy
+SQLite
+Pydantic
+AI / RAG Stack
+Groq LLM API
+Tavily Search API
+Vector Embeddings
+Semantic Retrieval
+Multi-Agent Orchestration
+Citation-aware Generation
+
+---
+
+📂 Project Structure
+
 ai-research-assistant/
 ├── frontend/
 │   ├── app/
@@ -193,18 +241,16 @@ ai-research-assistant/
 │   ├── requirements.txt
 │   └── .env.example
 │
+├── screenshots/
 ├── README.md
 ├── HOW_TO_USE.md
 └── .gitignore
-```
 
 ---
 
-# ⚙️ Installation
+⚙️ Installation
 
-## Backend Setup
-
-```bash
+Backend Setup
 cd backend
 
 python -m venv .venv
@@ -216,13 +262,7 @@ pip install -r requirements.txt
 copy .env.example .env
 
 python -m uvicorn app.main:app --reload --port 8001
-```
-
----
-
-## Frontend Setup
-
-```bash
+Frontend Setup
 cd frontend
 
 npm install
@@ -230,108 +270,97 @@ npm install
 copy .env.example .env.local
 
 npm run dev
-```
 
 ---
 
-# 🌍 Environment Variables
+🌍 Environment Variables
 
-## Backend
-
-```env
+Backend
 LLM_PROVIDER=groq
 GROQ_API_KEY=your_key
 WEB_SEARCH_PROVIDER=tavily
 TAVILY_API_KEY=your_key
 DATABASE_URL=sqlite:///./app.db
-```
 
-## Frontend
-
-```env
+Frontend
 NEXT_PUBLIC_API_URL=http://localhost:8001
-```
 
 ---
 
-# 📡 API Endpoints
+📡 API Endpoints
 
-| Method | Endpoint          | Description               |
-| ------ | ----------------- | ------------------------- |
-| GET    | `/health`         | Backend health status     |
-| POST   | `/upload`         | Upload documents          |
-| POST   | `/chat`           | Ask contextual questions  |
-| GET    | `/documents`      | List uploaded documents   |
-| DELETE | `/documents/{id}` | Remove document           |
-| GET    | `/history`        | Retrieve chat history     |
-| DELETE | `/history`        | Clear memory              |
-| POST   | `/summarize`      | Generate document summary |
-
----
-
-# 🖼️ Screenshots
-
-## Home Dashboard
-
-*Add screenshot here*
-
-## Research Chat
-
-*Add screenshot here*
-
-## Document Upload
-
-*Add screenshot here*
-
-## Document Library
-
-*Add screenshot here*
-
-## Settings Dashboard
-
-*Add screenshot here*
+Method	          Endpoint	               Description
+GET	              /health	               Backend health status
+POST	          /upload	               Upload documents
+POST	          /chat	                   Ask contextual questions
+GET	              /documents	           List uploaded documents
+DELETE	          /documents/{id}	       Remove document
+GET	              /history	               Retrieve chat history
+DELETE	          /history	               Clear memory
+POST	          /summarize	           Generate document summary
 
 ---
 
-# 🚀 Future Improvements
+🚀 Deployment
 
-* Streaming AI responses
-* Hybrid keyword + vector retrieval
-* Authentication and user workspaces
-* PostgreSQL + pgvector support
-* Source highlighting in PDFs
-* Multi-user deployment
-* Background ingestion workers
-* Agent observability dashboard
-* Voice-enabled research workflow
+Frontend-Vercel
+Backend-Render
+Database-SQLite
+Environment Variables-Managed securely through deployment platforms
 
 ---
 
-# 💡 Why This Project Matters
+🖼️ Screenshots
+
+Home Dashboard
+![Home](screenshots/home.png)
+
+Ask AIRA
+![Chat](screenshots/ask.png)
+
+Ingest Documents
+![Upload](screenshots/upload.png)
+
+Knowledge Base
+![Document Library](screenshots/base.png)
+
+About AIRA
+![Settings Dashboard](screenshots/about.png)
+
+---
+
+🚀 Future Improvements
+
+Streaming AI responses
+Hybrid keyword + vector retrieval
+Authentication and user workspaces
+PostgreSQL + pgvector support
+Source highlighting in PDFs
+Multi-user deployment
+Background ingestion workers
+Agent observability dashboard
+Voice-enabled research workflow
+
+---
+
+💡 Why This Project Matters
 
 Most AI chatbots generate answers without transparency.
-
 This project focuses on:
 
-* grounded generation
-* source-aware reasoning
-* document intelligence
-* explainable AI workflows
-* production-style AI system design
+grounded generation
+source-aware reasoning
+document intelligence
+explainable AI workflows
+production-style AI system design
 
 It demonstrates how modern AI systems combine:
 
-* LLM orchestration
-* retrieval systems
-* vector databases
-* semantic search
-* web augmentation
-* memory-aware interactions
+LLM orchestration
+retrieval systems
+vector databases
+semantic search
+web augmentation
+memory-aware interactions
 
 into a cohesive real-world application.
-
----
-
-# Author
-
-*Mokshit*

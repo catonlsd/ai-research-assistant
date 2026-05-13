@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Globe2, Send, Sparkles } from "lucide-react";
+import { Globe2, Cpu, Send, Sparkles } from "lucide-react";
 import { CitationList } from "@/components/citation-list";
 import { type ChatResponse, sendChat } from "@/lib/api";
 
@@ -52,17 +52,16 @@ export default function ChatPage() {
         <div className="relative z-10 flex items-start justify-between gap-4">
           <div>
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-accent">
-              <Sparkles className="h-3.5 w-3.5" />
-              Source-grounded research chat
+              <Cpu className="h-3.5 w-3.5" />
+              AI-powered research workspace
             </div>
 
             <h1 className="text-3xl font-semibold tracking-tight text-slate-950">
-              Research Chat
+              AIRA Workspace
             </h1>
 
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-              Ask questions across uploaded documents and web results with clean,
-              source-aware answers.
+              Ask questions across your documents and receive answers enhanced by semantic retrieval and web intelligence.
             </p>
           </div>
 
@@ -84,8 +83,7 @@ export default function ChatPage() {
             </h2>
 
             <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">
-              Upload documents, enable web search if needed, and ask a focused
-              research question.
+              Upload documents, enable web search if needed, and ask questions.
             </p>
           </div>
         )}

@@ -37,11 +37,11 @@ export default function HistoryPage() {
           <div>
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-accent">
               <History className="h-3.5 w-3.5" />
-              Conversation memory
+              Conversation archive
             </div>
 
             <h1 className="text-3xl font-semibold tracking-tight text-slate-950">
-              Conversation History
+              Interaction Timeline
             </h1>
 
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
@@ -100,11 +100,11 @@ export default function HistoryPage() {
             </div>
 
             <p className="text-sm font-semibold text-slate-800">
-              No history yet.
+              No interactions yet.
             </p>
 
             <p className="mt-1 text-xs text-slate-500">
-              Your conversation memory will appear here after chatting.
+              You haven't interacted with AIRA yet.
             </p>
           </div>
         )}

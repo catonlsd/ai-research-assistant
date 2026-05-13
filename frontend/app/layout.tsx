@@ -3,9 +3,9 @@ import { Nav } from "@/components/nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Research Assistant",
+  title: "AIRA - AI Research Assistant",
   description:
-    "Production-style AI research assistant with multi-document RAG, web search, memory, and citations.",
+    "AIRA is your research assistant with multi document retrieval, grounded answers, semantic search and web enhanced intelligence.",
 };
 
 export default function RootLayout({

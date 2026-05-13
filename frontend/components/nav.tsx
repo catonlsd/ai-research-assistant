@@ -5,10 +5,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
-  History,
+  Handshake,
   Home,
   MessageSquare,
-  Settings,
   Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,11 +16,11 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
 
 const links = [
   { href: "/", label: "Home", animation: "home" },
-  { href: "/upload", label: "Upload", animation: "upload" },
-  { href: "/chat", label: "Chat", animation: "chat" },
-  { href: "/documents", label: "Documents", animation: "book" },
-  { href: "/history", label: "History", animation: "rotate" },
-  { href: "/settings", label: "Settings", animation: "gear" },
+  { href: "/upload", label: "Ingest Documents", animation: "upload" },
+  { href: "/chat", label: "Ask AIRA", animation: "chat" },
+  { href: "/documents", label: "Knowledge Base", animation: "book" },
+  { href: "/history", label: "Interactions", animation: "handshake" },
+  { href: "/settings", label: "About AIRA", animation: "spark" },
 ];
 
 function UploadAnimatedIcon({ active }: { active: boolean }) {
@@ -82,14 +81,16 @@ export function Nav() {
 
           <div>
             <div className="text-lg font-bold tracking-tight text-slate-950">
-              AI Research
+              AIRA
             </div>
-            <div className="text-sm font-semibold text-accent">Assistant</div>
+            <div className="text-sm font-semibold text-accent">
+              AI Research Assistant
+            </div>
           </div>
         </div>
 
         <p className="mt-4 text-sm leading-6 text-slate-500">
-          RAG, web research, memory and citations.
+          Research assistant for documents, web, and cited AI answers.
         </p>
       </div>
 
@@ -98,14 +99,14 @@ export function Nav() {
           const active = pathname === item.href;
 
           const iconClass =
-            item.animation === "chat"
-              ? "group-hover:-rotate-6 group-hover:scale-125 group-hover:translate-x-1 duration-500"
+            item.animation === "home"
+              ? "group-hover:translate-x-2 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.45)] duration-500"
+              : item.animation === "chat"
+              ? "group-hover:animate-[chatBubblePop_0.55s_ease-out] duration-500"
               : item.animation === "book"
               ? "group-hover:scale-x-125 group-hover:scale-y-110 duration-500"
-              : item.animation === "rotate"
-              ? "group-hover:-rotate-[360deg] duration-1000"
-              : item.animation === "gear"
-              ? "group-hover:rotate-[360deg] duration-1000"
+              : item.animation === "handshake"
+              ? "group-hover:animate-[handshake_0.55s_ease-in-out] duration-500"
               : "group-hover:rotate-6 group-hover:scale-125 duration-500";
 
           const Icon =
@@ -115,10 +116,10 @@ export function Nav() {
               ? MessageSquare
               : item.animation === "book"
               ? BookOpen
-              : item.animation === "rotate"
-              ? History
-              : item.animation === "gear"
-              ? Settings
+              : item.animation === "handshake"
+              ? Handshake
+              : item.animation === "spark"
+              ? Sparkles
               : null;
 
           return (
@@ -140,15 +141,26 @@ export function Nav() {
               {item.animation === "upload" ? (
                 <UploadAnimatedIcon active={active} />
               ) : Icon ? (
-                <Icon
-                  className={cn(
-                    "h-4 w-4 transition-all ease-out",
-                    iconClass,
-                    active
-                      ? "text-white"
-                      : "text-slate-500 group-hover:text-accent"
-                  )}
-                />
+                item.animation === "spark" ? (
+                  <span
+                    className={cn(
+                      "rounded-xl bg-blue-600 p-1 text-white shadow-lg shadow-blue-600/20 transition-all duration-300",
+                      "group-hover:-translate-y-0.5 group-hover:rotate-3"
+                    )}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </span>
+                ) : (
+                  <Icon
+                    className={cn(
+                      "h-4 w-4 transition-all ease-out",
+                      iconClass,
+                      active
+                        ? "text-white"
+                        : "text-slate-500 group-hover:text-accent"
+                    )}
+                  />
+                )
               ) : null}
 
               <span>{item.label}</span>
@@ -181,20 +193,12 @@ export function Nav() {
 
           <span className="text-sm font-semibold text-slate-800">
             {backendOnline === null
-              ? "Checking System"
+              ? "Checking AIRA"
               : backendOnline
-              ? "System Online"
-              : "System Offline"}
+              ? "AIRA Online"
+              : "AIRA Offline"}
           </span>
         </div>
-
-        <p className="mt-2 text-xs leading-5 text-slate-500">
-          {backendOnline === null
-            ? "Checking FastAPI backend status..."
-            : backendOnline
-            ? "FastAPI backend connected locally."
-            : "FastAPI backend is not reachable."}
-        </p>
       </div>
     </aside>
   );

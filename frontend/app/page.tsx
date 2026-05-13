@@ -37,13 +37,12 @@ export default function HomePage() {
             </div>
 
             <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950">
-              AI Research Assistant for documents, web search and cited answers.
+              AIRA for documents, web search and cited answers.
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600">
-              Upload research material, ask grounded questions, search the web
-              when recency matters, and keep useful conversation memory without
-              exposing secrets.
+              Upload documents, ask questions, retrieve answers
+              and enhance research with real-time web intelligence.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -109,7 +108,7 @@ export default function HomePage() {
           <div>
             <div className="flex items-center gap-2 text-sm font-semibold text-accent">
               <Brain className="h-4 w-4" />
-              Built for portfolio-grade GenAI engineering
+              Designed for intelligent research workflows
             </div>
 
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
@@ -123,7 +122,7 @@ export default function HomePage() {
             href="/settings"
             className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-5 py-3 text-sm font-semibold text-accent transition hover:-translate-y-0.5 hover:bg-blue-100"
           >
-            View system dashboard
+            View Architecture
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -13,7 +13,7 @@ from app.db.database import init_db
 
 
 app = FastAPI(
-    title="AI Research Assistant API",
+    title="AIRA API",
     description="Production-style multi-document RAG API with web research, citations, memory, and summarization.",
     version="1.0.0",
 )
@@ -40,7 +40,7 @@ def on_startup() -> None:
 @app.get("/")
 def root() -> dict:
     return {
-        "message": "AI Research Assistant API is running",
+        "message": "AIRA API is running",
         "docs": "/docs",
         "health": "/health",
     }
@@ -50,7 +50,7 @@ def root() -> dict:
 def health() -> dict:
     return {
         "status": "online",
-        "service": "AI Research Assistant API",
+        "service": "AIRA API",
         "version": "1.0.0",
     }
 
