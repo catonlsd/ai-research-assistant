@@ -1,4 +1,5 @@
-# 🧠 AI Research Assistant
+````md
+# 🧠 AIRA — AI Research Assistant
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
@@ -8,24 +9,25 @@
 ![Python](https://img.shields.io/badge/Python-AI-yellow)
 ![License](https://img.shields.io/badge/License-MIT-purple)
 
-A production-style full-stack Generative AI platform that combines Retrieval-Augmented Generation (RAG), multi-document reasoning, web research, semantic retrieval, memory systems, and citation-aware answer generation into a modern AI research workflow.
+AIRA is a full-stack AI research assistant built with RAG, web search, citation-based answering, FastAPI, Groq LLMs, and Next.js for intelligent document understanding and grounded AI conversations.
 
 The platform enables users to upload research documents, retrieve semantic information, generate grounded answers with citations, summarize documents, and augment responses using live web search.
 
 Built using FastAPI, Next.js, Groq LLMs, vector embeddings, semantic retrieval pipelines, and multi-agent orchestration.
 
-```
-## 🔗 Live Demo
+---
+
+# 🔗 Live Demo
 
 ### Frontend
 
-https://ai-research-assistant-lime-five.vercel.app/
+[Open AIRA Frontend](https://ai-research-assistant-lime-five.vercel.app/)
 
 ### Backend API Docs
 
-https://ai-research-assistant-backend-eoew.onrender.com/docs
+[Open FastAPI Swagger Docs](https://ai-research-assistant-backend-eoew.onrender.com/docs)
 
-```
+---
 
 # ✨ Key Highlights
 
@@ -40,7 +42,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 ✅ Modern AI dashboard UI  
 ✅ Production-style deployment architecture  
 
-```
+---
 
 # 🚀 Features
 
@@ -53,7 +55,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Multi-document contextual QnA
 - AI-generated document summaries
 
-```
+---
 
 ## 🔍 AI Retrieval Pipeline
 
@@ -63,7 +65,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Relevant-source filtering
 - Source-grounded answer generation
 
-```
+---
 
 ## 🌐 Web Research
 
@@ -72,7 +74,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Web citation support
 - External knowledge augmentation
 
-```
+---
 
 ## 🧠 Memory System
 
@@ -81,7 +83,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Context retention across sessions
 - SQLite-based chat memory
 
-```
+---
 
 ## 🎨 Frontend Experience
 
@@ -92,10 +94,11 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Chat-based workflow
 - Document management interface
 
-```
+---
 
 # 🏗️ System Architecture
 
+```text
 User Query
     │
     ▼
@@ -119,107 +122,119 @@ Answer Generation Agent
     │
     ▼
 Frontend UI (Next.js)
+````
 
-```
+---
 
-🧠 AI Pipeline
+# 🧠 AI Pipeline
 
-1. Document Ingestion
+## 1. Document Ingestion
 
 Documents are:
-uploaded
-cleaned
-chunked
-embedded
-indexed into vector storage
 
-2. Query Understanding
+* uploaded
+* cleaned
+* chunked
+* embedded
+* indexed into vector storage
+
+## 2. Query Understanding
 
 The system detects:
-document intent
-summarization intent
-recency requirements
-web search requirements
 
-3. Retrieval
+* document intent
+* summarization intent
+* recency requirements
+* web search requirements
+
+## 3. Retrieval
 
 Relevant chunks are retrieved using:
-semantic similarity
-contextual embeddings
-vector search
 
-4. Web Augmentation
+* semantic similarity
+* contextual embeddings
+* vector search
+
+## 4. Web Augmentation
 
 If required:
-web search is triggered
-results are summarized
-sources are filtered
 
-5. Answer Generation
+* web search is triggered
+* results are summarized
+* sources are filtered
+
+## 5. Answer Generation
 
 The LLM:
-combines retrieved context
-generates grounded answers
-attaches citations
-removes unsupported claims
 
-```
+* combines retrieved context
+* generates grounded answers
+* attaches citations
+* removes unsupported claims
 
-🧩 Engineering Concepts Demonstrated
+---
 
-Retrieval-Augmented Generation (RAG)
-Semantic Search
-Vector Embeddings
-Multi-Agent AI Orchestration
-Context Grounding
-Citation-aware Generation
-Full-stack AI Deployment
-Prompt Engineering
-API Design with FastAPI
-Async AI Pipelines
-Stateful Memory Systems
-Production-style AI Workflows
+# 🧩 Engineering Concepts Demonstrated
 
-```
+* Retrieval-Augmented Generation (RAG)
+* Semantic Search
+* Vector Embeddings
+* Multi-Agent AI Orchestration
+* Context Grounding
+* Citation-aware Generation
+* Full-stack AI Deployment
+* Prompt Engineering
+* API Design with FastAPI
+* Async AI Pipelines
+* Stateful Memory Systems
+* Production-style AI Workflows
 
-⚡ Challenges Solved
+---
 
-Cross-origin frontend/backend deployment
-Citation grounding
-Multi-document retrieval
-Context window optimization
-Semantic chunk retrieval
-Persistent memory management
-Real-time web augmentation
-Frontend-backend orchestration
+# ⚡ Challenges Solved
 
-```
+* Cross-origin frontend/backend deployment
+* Citation grounding
+* Multi-document retrieval
+* Context window optimization
+* Semantic chunk retrieval
+* Persistent memory management
+* Real-time web augmentation
+* Frontend-backend orchestration
 
-🛠️ Tech Stack
+---
 
-Frontend
-Next.js 14
-TypeScript
-Tailwind CSS
-lucide-react
-Backend
-FastAPI
-Python
-SQLAlchemy
-SQLite
-Pydantic
-AI / RAG Stack
-Groq LLM API
-Tavily Search API
-Vector Embeddings
-Semantic Retrieval
-Multi-Agent Orchestration
-Citation-aware Generation
+# 🛠️ Tech Stack
 
-```
+## Frontend
 
-📂 Project Structure
+* Next.js 14
+* TypeScript
+* Tailwind CSS
+* lucide-react
 
+## Backend
+
+* FastAPI
+* Python
+* SQLAlchemy
+* SQLite
+* Pydantic
+
+## AI / RAG Stack
+
+* Groq LLM API
+* Tavily Search API
+* Vector Embeddings
+* Semantic Retrieval
+* Multi-Agent Orchestration
+* Citation-aware Generation
+
+---
+
+# 📂 Project Structure
+
+```text
 ai-research-assistant/
 ├── frontend/
 │   ├── app/
@@ -245,12 +260,15 @@ ai-research-assistant/
 ├── README.md
 ├── HOW_TO_USE.md
 └── .gitignore
-
 ```
 
-⚙️ Installation
+---
 
-Backend Setup
+# ⚙️ Installation
+
+## Backend Setup
+
+```bash
 cd backend
 
 python -m venv .venv
@@ -262,7 +280,11 @@ pip install -r requirements.txt
 copy .env.example .env
 
 python -m uvicorn app.main:app --reload --port 8001
-Frontend Setup
+```
+
+## Frontend Setup
+
+```bash
 cd frontend
 
 npm install
@@ -270,107 +292,124 @@ npm install
 copy .env.example .env.local
 
 npm run dev
-
 ```
 
-🌍 Environment Variables
+---
 
-Backend
+# 🌍 Environment Variables
+
+## Backend
+
+```env
 LLM_PROVIDER=groq
 GROQ_API_KEY=your_key
 WEB_SEARCH_PROVIDER=tavily
 TAVILY_API_KEY=your_key
 DATABASE_URL=sqlite:///./app.db
+```
 
-Frontend
+## Frontend
+
+```env
 NEXT_PUBLIC_API_URL=http://localhost:8001
-
 ```
 
-📡 API Endpoints
+---
 
-Method	          Endpoint	               Description
-GET	              /health	               Backend health status
-POST	          /upload	               Upload documents
-POST	          /chat	                   Ask contextual questions
-GET	              /documents	           List uploaded documents
-DELETE	          /documents/{id}	       Remove document
-GET	              /history	               Retrieve chat history
-DELETE	          /history	               Clear memory
-POST	          /summarize	           Generate document summary
+# 📡 API Endpoints
 
-```
+| Method | Endpoint          | Description               |
+| ------ | ----------------- | ------------------------- |
+| GET    | `/health`         | Backend health status     |
+| POST   | `/upload`         | Upload documents          |
+| POST   | `/chat`           | Ask contextual questions  |
+| GET    | `/documents`      | List uploaded documents   |
+| DELETE | `/documents/{id}` | Remove document           |
+| GET    | `/history`        | Retrieve chat history     |
+| DELETE | `/history`        | Clear memory              |
+| POST   | `/summarize`      | Generate document summary |
 
-🚀 Deployment
+---
 
-Frontend-Vercel
-Backend-Render
-Database-SQLite
-Environment Variables-Managed securely through deployment platforms
+# 🚀 Deployment
 
-```
+* Frontend → Vercel
+* Backend → Render
+* Database → SQLite
+* Environment Variables → Managed securely through deployment platforms
 
-🖼️ Screenshots
+---
 
-Home Dashboard
+# 🖼️ Screenshots
+
+## Home Dashboard
+
 ![Home](screenshots/home.png)
 
-Ask AIRA
+## Ask AIRA
+
 ![Chat](screenshots/ask.png)
 
-Ingest Documents
+## Ingest Documents
+
 ![Upload](screenshots/upload.png)
 
-Knowledge Base
+## Knowledge Base
+
 ![Document Library](screenshots/base.png)
 
-Interactions
+## Interactions
+
 ![Interact](screenshots/sessions.png)
 
-About AIRA
+## About AIRA
+
 ![Settings Dashboard](screenshots/about.png)
 
-```
+---
 
-🚀 Future Improvements
+# 🚀 Future Improvements
 
-Streaming AI responses
-Hybrid keyword + vector retrieval
-Authentication and user workspaces
-PostgreSQL + pgvector support
-Source highlighting in PDFs
-Multi-user deployment
-Background ingestion workers
-Agent observability dashboard
-Voice-enabled research workflow
+* Streaming AI responses
+* Hybrid keyword + vector retrieval
+* Authentication and user workspaces
+* PostgreSQL + pgvector support
+* Source highlighting in PDFs
+* Multi-user deployment
+* Background ingestion workers
+* Agent observability dashboard
+* Voice-enabled research workflow
 
-```
+---
 
-💡 Why This Project Matters
+# 💡 Why This Project Matters
 
 Most AI chatbots generate answers without transparency.
+
 This project focuses on:
 
-- grounded generation  
-- source-aware reasoning  
-- document intelligence  
-- explainable AI workflows  
-- production-style AI system design
+* grounded generation
+* source-aware reasoning
+* document intelligence
+* explainable AI workflows
+* production-style AI system design
 
 It demonstrates how modern AI systems combine:
 
-- LLM orchestration  
-- retrieval systems  
-- vector databases  
-- semantic search  
-- web augmentation  
-- memory-aware interactions
+* LLM orchestration
+* retrieval systems
+* vector databases
+* semantic search
+* web augmentation
+* memory-aware interactions
 
 into a cohesive real-world application.
 
-```
+---
 
-👨‍💻 Author
+# 👨‍💻 Author
 
 **Mokshit**
 
+```
+```
