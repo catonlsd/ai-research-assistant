@@ -15,12 +15,14 @@ The platform enables users to upload research documents, retrieve semantic infor
 Built using FastAPI, Next.js, Groq LLMs, vector embeddings, semantic retrieval pipelines, and multi-agent orchestration.
 
 ```
- 🔗 Live Demo
+## 🔗 Live Demo
 
-Frontend
+### Frontend
+
 https://ai-research-assistant-lime-five.vercel.app/
 
-Backend API Docs
+### Backend API Docs
+
 https://ai-research-assistant-backend-eoew.onrender.com/docs
 
 ```
