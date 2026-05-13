@@ -350,21 +350,26 @@ Voice-enabled research workflow
 Most AI chatbots generate answers without transparency.
 This project focuses on:
 
-grounded generation
-source-aware reasoning
-document intelligence
-explainable AI workflows
-production-style AI system design
+- grounded generation  
+- source-aware reasoning  
+- document intelligence  
+- explainable AI workflows  
+- production-style AI system design
 
 It demonstrates how modern AI systems combine:
 
-LLM orchestration
-retrieval systems
-vector databases
-semantic search
-web augmentation
-memory-aware interactions
+- LLM orchestration  
+- retrieval systems  
+- vector databases  
+- semantic search  
+- web augmentation  
+- memory-aware interactions
 
 into a cohesive real-world application.
 
 ```
+
+👨‍💻 Author
+
+**Mokshit**
+
