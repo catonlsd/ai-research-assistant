@@ -14,7 +14,7 @@ The platform enables users to upload research documents, retrieve semantic infor
 
 Built using FastAPI, Next.js, Groq LLMs, vector embeddings, semantic retrieval pipelines, and multi-agent orchestration.
 
----
+```
 
 # 🔗 Live Demo
 
@@ -24,7 +24,7 @@ https://ai-research-assistant-lime-five.vercel.app/
 ## Backend API Docs
 https://ai-research-assistant-backend-eoew.onrender.com/docs
 
----
+```
 
 # ✨ Key Highlights
 
@@ -39,7 +39,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 ✅ Modern AI dashboard UI  
 ✅ Production-style deployment architecture  
 
----
+```
 
 # 🚀 Features
 
@@ -52,7 +52,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Multi-document contextual QnA
 - AI-generated document summaries
 
----
+```
 
 ## 🔍 AI Retrieval Pipeline
 
@@ -62,7 +62,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Relevant-source filtering
 - Source-grounded answer generation
 
----
+```
 
 ## 🌐 Web Research
 
@@ -71,7 +71,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Web citation support
 - External knowledge augmentation
 
----
+```
 
 ## 🧠 Memory System
 
@@ -80,7 +80,7 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Context retention across sessions
 - SQLite-based chat memory
 
----
+```
 
 ## 🎨 Frontend Experience
 
@@ -91,11 +91,10 @@ https://ai-research-assistant-backend-eoew.onrender.com/docs
 - Chat-based workflow
 - Document management interface
 
----
+```
 
 # 🏗️ System Architecture
 
-```text
 User Query
     │
     ▼
@@ -120,7 +119,7 @@ Answer Generation Agent
     ▼
 Frontend UI (Next.js)
 
----
+```
 
 🧠 AI Pipeline
 
@@ -163,7 +162,7 @@ generates grounded answers
 attaches citations
 removes unsupported claims
 
----
+```
 
 🧩 Engineering Concepts Demonstrated
 
@@ -180,7 +179,7 @@ Async AI Pipelines
 Stateful Memory Systems
 Production-style AI Workflows
 
----
+```
 
 ⚡ Challenges Solved
 
@@ -193,7 +192,7 @@ Persistent memory management
 Real-time web augmentation
 Frontend-backend orchestration
 
----
+```
 
 🛠️ Tech Stack
 
@@ -216,7 +215,7 @@ Semantic Retrieval
 Multi-Agent Orchestration
 Citation-aware Generation
 
----
+```
 
 📂 Project Structure
 
@@ -246,7 +245,7 @@ ai-research-assistant/
 ├── HOW_TO_USE.md
 └── .gitignore
 
----
+```
 
 ⚙️ Installation
 
@@ -271,7 +270,7 @@ copy .env.example .env.local
 
 npm run dev
 
----
+```
 
 🌍 Environment Variables
 
@@ -285,7 +284,7 @@ DATABASE_URL=sqlite:///./app.db
 Frontend
 NEXT_PUBLIC_API_URL=http://localhost:8001
 
----
+```
 
 📡 API Endpoints
 
@@ -299,7 +298,7 @@ GET	              /history	               Retrieve chat history
 DELETE	          /history	               Clear memory
 POST	          /summarize	           Generate document summary
 
----
+```
 
 🚀 Deployment
 
@@ -308,7 +307,7 @@ Backend-Render
 Database-SQLite
 Environment Variables-Managed securely through deployment platforms
 
----
+```
 
 🖼️ Screenshots
 
@@ -330,7 +329,7 @@ Interactions
 About AIRA
 ![Settings Dashboard](screenshots/about.png)
 
----
+```
 
 🚀 Future Improvements
 
@@ -344,7 +343,7 @@ Background ingestion workers
 Agent observability dashboard
 Voice-enabled research workflow
 
----
+```
 
 💡 Why This Project Matters
 
