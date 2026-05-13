@@ -1,4 +1,3 @@
-````md
 # 🧠 AIRA — AI Research Assistant
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
@@ -410,6 +409,3 @@ into a cohesive real-world application.
 # 👨‍💻 Author
 
 **Mokshit**
-
-```
-```
